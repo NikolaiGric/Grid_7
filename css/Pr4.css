@@ -1,0 +1,324 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    margin: 20px 0 0 0;
+    padding: 0;
+}
+body {
+    background-image: url('C:/Users/nikol/OneDrive/Рабочий стол/Front/Img/banner Image.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 75%; 
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+.grid-container1{
+    height:100vh;
+    display: grid;
+    grid-template-areas: ". item1 . item2 item3 item4 item5 item6 item7 ."
+                         ". . . . . . . . . ."
+                         ". . Text Text Text Text Text . . ."
+                         ". . . . . . . . . ."
+                         ". . tb1 tb2 tb3 tb4 tb4 . . .";
+    grid-template-columns: 80px 350px 250px 80px 80px 80px 80px 170px 170px 80px;
+    grid-template-rows: 30px 100px 50px 300px 90px;
+    width: 100%;
+    height: 100%;
+}
+.item{
+    /* padding: 33px 30px 0px 0px; */
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.item1{
+    /* padding: 33px 30px 0px 0px; */
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    grid-area: item1;
+}
+.item2{
+    text-decoration: none;
+    color: gray ;
+    grid-area: item2;
+}
+.item3{
+    text-decoration: none;
+    color: gray ;
+    grid-area: item3;
+}
+.item4{
+    text-decoration: none;
+    color: gray;
+    grid-area: item4;    
+}
+.item5{
+    text-decoration: none;
+    color: gray;
+    grid-area: item5;
+    
+}
+.item6{
+    padding: 0px 0px 0px 0px;
+    width: 110px;
+    background-color: #00BFCF;
+    color: #FFFFFF;
+    border-style: none;
+    border-radius: 130px;
+    grid-area: item6;
+}
+.item7{
+    padding: 0px 0px 0px 0px;
+    width: 110px;
+    height: 25px;  
+    background-color: #FFFFFF;
+    color: #939292;
+    border-style: none;
+    grid-area: item7;
+}
+.Text{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 33px;
+    width: 570px;
+    height: 50px;
+    text-align: center;
+    grid-area: Text;    
+}
+.end{
+    margin-top: 150px;
+    grid-area: end;
+}
+.tb1{
+    grid-area: tb1;
+
+}
+.tb2{
+    grid-area: tb2;
+
+}
+.tb3{
+    grid-area: tb3;
+
+}
+.tb4{
+    grid-area: tb4;
+    background-color: #00BFCF;
+    color: #FFFFFF;
+    border-style: none;
+    border-top-right-radius: 130px;
+    border-bottom-right-radius: 130px;
+
+}
+/* Стили для мобильных устройств (ширина до 600px, высота до 800px) */
+@media only screen and (max-width: 600px) and (max-height: 800px) {
+    .grid-container1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    body {
+        background-image: url('C:/Users/nikol/OneDrive/Рабочий стол/Front/Img/banner Image.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 85%; 
+        background-position: center;
+        margin: 0;
+        padding: 0;
+    }
+    .item{
+        padding: 4%;
+        font-size: 30px;
+        color: white;
+    }
+    .item1 {
+        font-size: 20px;
+    }
+    .item6{
+        padding: 0px 0px 0px 0px;
+        font-size: 20px;
+        width: 110px;
+        height: 30px;
+        background-color: #00BFCF;
+        color: #FFFFFF;
+        border-style: none;
+        border-radius: 130px;
+        grid-area: item6;
+    }
+    .item7{
+        padding: 0px 0px 0px 0px;
+        margin-top: 20px;
+        font-size: 20px;
+        width: 110px;
+        height: 25px;  
+        border-style: none;
+        background-color: #FFFFFF;
+        color: #939292;
+    }
+    .Text{
+        font-size: 25px;
+        width: 500px;
+        height: 50px;
+        text-align: center;
+        margin-top: 50px;
+
+    }
+    .tb1, .tb2, .tb3 {
+        width: 170px;
+    }
+    .tb1
+    {margin: 60px 0 0 0;}
+
+    .tb4 {
+        width: 130px;
+        border-top-right-radius: 130px;
+        border-bottom-right-radius: 130px;
+        border-top-left-radius: 130px;
+        border-bottom-left-radius: 130px;
+    }
+}
+
+/* Стили для планшетов (ширина от 601px до 1024px, высота от 801px до 1200px) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) and (min-height: 801px) and (max-height: 1200px) {
+    .grid-container1 {
+        display: grid;
+        grid-template-columns: 0px 60px 140px 130px 150px 150px;
+        grid-template-rows: 100px 230px 100px 260px 150px 100px;
+    }
+    body {
+        background-image: url('C:/Users/nikol/OneDrive/Рабочий стол/Front/Img/banner Image.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 75%; 
+        background-position: center;
+        margin: 40px;
+        padding: 0;
+    }
+    .item{
+        font-size: 30px;
+    }
+    .item1 {
+        font-size: 30px;
+        grid-column: 2;
+    }
+
+    .item6{
+        width: 180px;
+        height: 100px;
+        font-size: 22px;
+        grid-column: 3;
+        grid-row: 2;
+    }
+    .item7 {
+        width: 180px;
+        height: 100px;
+        font-size: 22px;
+        grid-column: 6;
+        grid-row: 2;
+    }
+
+    .Text {
+        font-size: 40px;
+        width: 90%;
+    }
+
+    .tb1, .tb2, .tb3 {
+        width: 150px;
+        height: 80px;
+        align-self: center;
+    }
+
+    .tb4 {
+        width: 130px;
+        height: 80px;
+        align-self: center;
+        
+    }
+}
+/* Стили для устройств с шириной экрана от 1025px и высотой от 1201px */
+@media only screen and (min-width: 1025px) and (min-height: 1201px) {
+    .grid-container1 {
+        grid-template-columns: 200px 80px 120px 100px 100px 100px 100px;
+        grid-template-rows: 90px 80px 80px 300px 180px 220px 150px 90px;
+    }
+    body {
+        background-image: url('C:/Users/nikol/OneDrive/Рабочий стол/Front/Img/banner Image.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 85%; 
+        background-position: center;
+        margin: 110px 0 0 80px;
+        padding: 0;
+    }
+    html{
+        margin: 0 0 0 0;
+        padding: 0;
+    }
+
+    .item1 {
+        font-size: 42px;
+        grid-column: 1;
+
+    }
+    .item2{
+        grid-column: 3;
+    }
+    .item3{
+        grid-column: 5;
+    }
+    .item4{
+        grid-column: 7;
+    }
+    .item5{
+        grid-column: 3;
+        grid-row: 3;
+    }
+    .item{
+        font-size: 35px;
+    }
+    .item6, .item7 {
+        width: 185px;
+        height: 70px;
+        font-size: 30px;
+    }
+    .item6{
+        grid-column: 5;
+        grid-row: 3;
+    }
+    .item7{
+        grid-column: 7;
+        grid-row: 3;
+    }
+
+    .Text {
+        font-size: 45px;
+        grid-column: 2 / span 8;
+        grid-row: 5;
+        color: #FFFFFF;
+    }
+
+    .tb1, .tb2, .tb3 {
+        width: 200px;
+    }
+    .tb1{
+        grid-column: 2 / span 4;
+        grid-row: 7;
+    }
+    .tb2{
+        grid-column: 4 / span 6;
+        grid-row: 7;
+        border-left: 10px solid black; /* граница слева */
+        border-right: 10px solid black;
+    }
+    .tb3{
+        grid-column: 6 / span 8;
+        grid-row: 7;
+    }
+    .tb4 {
+        width: 130px;
+        grid-column: 8;
+        grid-row: 7;
+    }
+}
